@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing -->
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;  /* 안에 들어있는 inner박스가 부모의 100%를 차지하기 때문에 빨간색은 보이지는않는다. */
+      }
+      .inner {
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+      }
+      .box2 {
+        padding: 20px;
+        box-sizing: content-box; /* 기본적인 박스 사이즈 , content의 사이즈는 변경되지 않는다.*/
+        border: 10px solid black; /* 외부적으로 박스가 발생한다. */
+      }
+
+      .box3 {
+        padding: 20px;
+        box-sizing: border-box; /* 보더박스는 패딩과 보더를 합해서 포함하는 것을 말한다. */
+        border: 10px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Box without padding</h3>
+    <div class="box box1">
+      <div class="inner"></div>
+    </div>
+
+    <h3>Box with padding</h3>
+    <div class="box box2">
+      <div class="inner"></div>
+    </div>
+
+    <h3>Box with padding, boder-box</h3>
+    <div class="box box3">
+      <div class="inner"></div>
+    </div>
+  </body>
+</html>

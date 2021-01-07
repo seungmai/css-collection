@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/position-->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_Block -->
+    <style>
+      .container {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        background-color: beige;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        background-color: chocolate;
+      }
+
+      .box2 {
+        background-color: hotpink;
+        position: sticky; 
+        /* sticky는 기존에 들어 있던 자리를 유지하다가 스크롤링이 되면서 더 이상 보여지지 않는 시점에 우리가 지정한 top left 포지션에 붙어 있다. top과 left는 꼭 지정을 해줘야된다.*/
+        top:0px;
+        left: 0px;
+      }
+
+      .box3 {
+        background-color: blue;
+        position: fixed; 
+        /* fixed는 부모와는 상관없이 그냥 쏙 나와서 포지션닝을 하는 것을 말한다. fixed는 완전히 기존의 문서에서 나와 가지고 상대적으로 뷰포트에서 포지션에 결정이 된다. */
+        top:0px;
+        left: 0px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+      <div class="box box6"></div>
+      <div class="box box7"></div>
+      <div class="box box8"></div>
+      <div class="box box9"></div>
+      <div class="box box10"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/transform -->
+    <style>
+      .box {
+        width: 100px;
+        height: 120px;
+        background-color: brown;
+        margin-bottom: 20px;
+      }
+
+      .box1 {
+        transform: translateX(100px);
+        /* translate은 위치를 이동하는 것을 말한다. */
+      }
+
+      .box2 {
+        transform: translate(50px, -20px);
+        /* translate은 위치를 이동하는 것을 말한다. */
+      }
+
+      .box3 {
+        transform: scale(1.2);
+        /* scale을 쓰는 1.2배 커진 것을 확인 할 수 있다. */
+      }
+
+      .box4 {
+        transform: rotate(45deg);
+        /* rotate를 사용하면 박스가 돌아간 것을 확인 할 수 있다. */
+      }
+
+      .box5 {
+        transform: translate(100px, 100px) scale(2) rotate(46deg);
+         /* 한번에도 사용이 가능하다. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </body>
+</html>

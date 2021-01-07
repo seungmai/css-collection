@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: beige;
+      }
+
+      .inner {
+        width: 50%;
+        height: 50%;
+        background-color: blue;
+      }
+
+      .inner1 {
+        margin: auto;
+        /* 하나만 들어가기 위해서 들어가 있는 아이템이기 때문에 수평으로만 중간 정렬이 가능하다. 수직은 적용이 안된다. */
+      }
+
+      .box2 {
+        text-align: center; 
+        /* text-align: center;을 지정해도 아무런 변화가 없다. 이유는 옆에 마진이 들어가 있기때문에 마진을 auto로 주어야 센터로 이동하는 것을 볼 수 있다. 또한 text-align은 텍스트만 움직일 수 있을 것 같지만 다른요소들을 이동시키고 싶을 때도 사용한다(인라인 블럭).(블럭레벨이 아닌 경우에만 div는 안됨)*/
+      }
+
+      .inner3 {
+        transform: translate(50%, 50%);
+        /* transform은 움직이는 거 로테이션 하는 것들이 가능하다. translate을 이용해서 중간 정렬을 할 수 있다.. */
+      }
+
+      .box4 h1 {
+        text-align: center;
+        line-height: 100px;
+        /* 부모의 높이만큼 픽셀을 지정해주면 텍스트가 중앙으로 위치하는 것을 볼 수 있다. */
+      }
+    </style>
+  </head>
+  <body>
+    <h3>margin: auto</h3>
+    <div class="box box1">
+      <!-- div는 블럭 레벨이기 때문에 자동적으로 마진이 auto로 들어와있다. -->
+      <div class="inner inner1"></div>
+    </div>
+    <h3>text-align: center</h3>
+    <div class="box box2">
+      <button>TEXT</button>
+    </div>
+    <h3>translate(50%, 50%)</h3>
+    <div class="box box3">
+      <div class="inner inner3"></div>
+    </div>
+    <h3>Text centering</h3>
+    <div class="box box4">
+      <h1>Text</h1>
+    </div>
+  </body>
+</html>
